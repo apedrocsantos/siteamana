@@ -1,0 +1,225 @@
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+a {
+  text-decoration: none;
+  color: black;
+}
+a a:hover {
+  font-style: italic;
+}
+
+.article {
+  text-transform: none;
+  font-size: 1rem;
+  letter-spacing: 0.3px;
+  line-height: 2;
+}
+
+.underline {
+  text-decoration: underline;
+}
+
+.menu {
+  z-index: -1;
+  position: fixed;
+  top: 50px;
+  left: -300px;
+  max-width: 300px;
+  height: 100vh;
+  background-color: rgba(244, 244, 244, 0.8);
+  transition: all ease-in-out 0.7s;
+}
+.menu ul {
+  flex-direction: column;
+  position: relative;
+  margin-right: 30px;
+}
+.menu ul li {
+  font-size: 0.8rem;
+  margin-bottom: 20px;
+}
+.menu ul li a:hover {
+  font-style: italic;
+}
+.menu .home {
+  text-transform: none;
+}
+
+body {
+  background-color: #f4f4f4;
+  font-family: Arial, Helvetica, sans-serif;
+  line-height: 1.6;
+}
+
+header {
+  min-height: 50px;
+  position: sticky;
+  display: flex;
+  align-items: center;
+  top: 0;
+  background: rgb(255, 255, 255);
+  background: linear-gradient(180deg, rgb(255, 255, 255) 0%, rgba(255, 255, 255, 0.7) 50%, rgba(255, 255, 255, 0) 100%);
+  z-index: 3;
+  text-transform: uppercase;
+  padding: 10px 40px;
+  font-size: 0.7rem;
+  letter-spacing: 2px;
+}
+header h1 {
+  font-size: 1.3rem;
+  font-weight: 400;
+}
+header nav {
+  width: 100%;
+  display: flex;
+  justify-content: space-between;
+  align-items: baseline;
+}
+header ul {
+  display: flex;
+  list-style-type: none;
+}
+header ul li {
+  margin-left: 40px;
+}
+header ul li:hover {
+  text-decoration: underline;
+}
+header .menu-btn {
+  font-size: 1.2rem;
+  padding: 5px;
+  z-index: 10;
+}
+header .menu-btn:hover {
+  cursor: pointer;
+}
+
+main {
+  text-transform: uppercase;
+  margin: 100px 150px;
+  font-size: 1.1rem;
+  letter-spacing: 2px;
+}
+main ul {
+  list-style-type: none;
+  position: relative;
+}
+main ul li {
+  margin-top: 10px;
+}
+main ul li:hover {
+  font-style: italic;
+}
+
+#index main {
+  min-width: 650px;
+  display: flex;
+  overflow: hidden;
+  justify-content: space-between;
+  align-items: center;
+}
+
+#info main {
+  font-size: 0.7rem;
+}
+#info main > * {
+  margin-bottom: 40px;
+}
+#info main #curriculum {
+  font-size: 0.5rem;
+}
+#info address a:hover {
+  font-style: italic;
+}
+
+#txt main .essay {
+  font-size: 1rem;
+  font-family: "Times New Roman", Times, serif;
+}
+#txt main .essay .author {
+  text-transform: none;
+}
+#txt main a:hover {
+  font-style: italic;
+}
+
+.articles main {
+  text-align: center;
+  font-size: 1rem;
+  margin-top: 0;
+  margin-bottom: 0;
+}
+.articles main .article {
+  font-family: "Times New Roman", Times, serif;
+}
+.articles main .article .article-header {
+  padding: 40vh 0;
+  position: relative;
+}
+.articles main .article .article-header .title {
+  font-size: 1.5rem;
+  font-style: italic;
+  font-weight: 400;
+}
+.articles main .article .article-header .author {
+  text-align: right;
+}
+.articles main .article .article-header .english-btn {
+  font-size: 0.8rem;
+  text-align: right;
+}
+.articles main .article .article-header .english-btn a {
+  color: gray;
+}
+.articles main .article .article-text {
+  -moz-column-count: 2;
+       column-count: 2;
+  -moz-column-width: 60px;
+       column-width: 60px;
+  -moz-column-gap: 50px;
+       column-gap: 50px;
+  text-align: left;
+  margin-top: 50px;
+  margin-bottom: 50px;
+}
+
+#anatema-img main {
+  margin-top: 0;
+}
+#anatema-img main .images {
+  border: 3px solid red;
+  display: flex;
+  justify-content: center;
+}
+#anatema-img main .images img {
+  min-height: 500px;
+  max-height: 80vh;
+  opacity: 50%;
+}
+#anatema-img main .toggleBtns {
+  margin-top: 10px;
+  display: flex;
+  justify-content: center;
+}
+#anatema-img main .toggleBtns .toggle {
+  border: 0;
+  font-size: 1.2rem;
+  padding: 10px;
+  border-radius: 50%;
+}
+
+@media screen and (max-width: 768px) {
+  .articles main {
+    margin-left: auto;
+    margin-right: auto;
+    width: 80%;
+  }
+  .articles main .article .article-text {
+    -moz-column-count: 1;
+         column-count: 1;
+  }
+}
