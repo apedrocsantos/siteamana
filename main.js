@@ -5,8 +5,8 @@ const imagediv = document.getElementById('image-div');
 const image = document.getElementById('image-section');
 const menuBtn = document.querySelector('.menu-btn');
 const menu = document.querySelector('.menu');
-const tLeft = document.querySelector('.t-left');
-const tRight = document.querySelector('.t-right');
+const arrowLeft = document.querySelector('.fa-arrow-left');
+const arrowRight = document.querySelector('.fa-arrow-right');
 
 const LargeImagesName = [
 	'Anatema_AS_1-1280x720',
@@ -39,14 +39,16 @@ try {
 		image.src = `/resources/anatema/${LargeImagesName[index - 1]}.jpg`;
 		console.log(LargeImagesName[index - 1]);
 	});
-	tLeft.addEventListener('click', (e) => {
+
+	arrowLeft.addEventListener('click', (e) => {
 		index--;
 		if (index === 0) {
 			index = LargeImagesName.length;
 		}
 		image.src = `/resources/anatema/${LargeImagesName[index - 1]}.jpg`;
 	});
-	tRight.addEventListener('click', (e) => {
+
+	arrowRight.addEventListener('click', (e) => {
 		index++;
 		if (index === LargeImagesName.length + 1) {
 			index = 1;
@@ -57,25 +59,9 @@ try {
 	console.log(error);
 }
 
-// function pictureNav(e) {
-// 	if (e.x < 665) {
-// 		index--;
-// 		if (index === 0) {
-// 			index = LargeImagesName.length;
-// 		}
-// 	} else {
-// 		index++;
-// 		if (index === LargeImagesName.length + 1) {
-// 			index = 1;
-// 		}
-// 	}
-// 	image.src = `/resources/anatema/${LargeImagesName[index - 1]}.jpg`;
-// 	console.log(LargeImagesName[index - 1]);
-// }
 
+//MENU
 let visible = false;
-
-console.log(menu);
 
 try {
 	menuBtn.addEventListener('click', () => {
@@ -84,11 +70,6 @@ try {
 			menu.style.left = '0';
 			menuBtn.style.fontStyle = 'italic';
 			visible = true;
-			// setTimeout(() => {
-			// 	menu.style.left = '-300px';
-			// 	menuBtn.style.fontStyle = 'normal';
-			// 	visible = false;
-			// }, 5000);
 		} else {
 			menu.style.left = '-300px';
 			menuBtn.style.fontStyle = 'normal';
@@ -101,7 +82,3 @@ try {
 
 // DOMContentLoaded
 // load event
-
-// main[0].addEventListener('DOMContentLoaded', () => {
-// 	console.log('loaded');
-// })
