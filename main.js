@@ -37,7 +37,6 @@ try {
 			}
 		}
 		image.src = `/resources/anatema/${LargeImagesName[index - 1]}.jpg`;
-		console.log(LargeImagesName[index - 1]);
 	});
 
 	arrowLeft.addEventListener('click', (e) => {
@@ -54,6 +53,23 @@ try {
 			index = 1;
 		}
 		image.src = `/resources/anatema/${LargeImagesName[index - 1]}.jpg`;
+	});
+
+	document.body.addEventListener('keydown', (e) => {
+		if(e.key === 'ArrowLeft') {
+			index--;
+		if (index === 0) {
+			index = LargeImagesName.length;
+		}
+		image.src = `/resources/anatema/${LargeImagesName[index - 1]}.jpg`;
+		}
+		else if (e.key === 'ArrowRight') {
+			index++;
+		if (index === LargeImagesName.length + 1) {
+			index = 1;
+		}
+		image.src = `/resources/anatema/${LargeImagesName[index - 1]}.jpg`;
+		}
 	});
 } catch (error) {
 	console.log(error);

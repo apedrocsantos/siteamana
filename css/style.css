@@ -50,9 +50,7 @@ a a:hover {
 }
 
 .slide-title {
-  position: relative;
-  margin-left: auto;
-  margin-right: auto;
+  position: absolute;
   list-style-type: none;
 }
 
