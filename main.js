@@ -36,7 +36,7 @@ try {
 				index = 1;
 			}
 		}
-		image.src = `/resources/anatema/${LargeImagesName[index - 1]}.jpg`;
+		image.src = `../resources/anatema/${LargeImagesName[index - 1]}.jpg`;
 	});
 
 	arrowLeft.addEventListener('click', (e) => {
@@ -45,7 +45,7 @@ try {
 		if (index === 0) {
 			index = LargeImagesName.length;
 		}
-		image.src = `/resources/anatema/${LargeImagesName[index - 1]}.jpg`;
+		image.src = `../resources/anatema/${LargeImagesName[index - 1]}.jpg`;
 	});
 
 	arrowRight.addEventListener('click', (e) => {
@@ -54,7 +54,7 @@ try {
 		if (index === LargeImagesName.length + 1) {
 			index = 1;
 		}
-		image.src = `/resources/anatema/${LargeImagesName[index - 1]}.jpg`;
+		image.src = `../resources/anatema/${LargeImagesName[index - 1]}.jpg`;
 	});
 
 	document.body.addEventListener('keydown', (e) => {
@@ -63,14 +63,14 @@ try {
 		if (index === 0) {
 			index = LargeImagesName.length;
 		}
-		image.src = `/resources/anatema/${LargeImagesName[index - 1]}.jpg`;
+		image.src = `../resources/anatema/${LargeImagesName[index - 1]}.jpg`;
 		}
 		else if (e.key === 'ArrowRight') {
 			index++;
 		if (index === LargeImagesName.length + 1) {
 			index = 1;
 		}
-		image.src = `/resources/anatema/${LargeImagesName[index - 1]}.jpg`;
+		image.src = `../resources/anatema/${LargeImagesName[index - 1]}.jpg`;
 		}
 	});
 
