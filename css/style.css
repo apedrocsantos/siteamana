@@ -108,8 +108,8 @@ a a:hover {
   font-style: italic;
 }
 
-.underline {
-  text-decoration: underline;
+.italic {
+  text-decoration: line-through;
 }
 
 #index main {
@@ -121,7 +121,7 @@ a a:hover {
 }
 
 #info main {
-  font-size: 1rem;
+  font-size: 0.7rem;
 }
 #info main > * {
   margin-bottom: 40px;
@@ -134,7 +134,7 @@ a a:hover {
 }
 
 #txt main .essay {
-  font-size: 1rem;
+  font-size: rem;
   font-family: "Times New Roman", Times, serif;
 }
 #txt main .essay .author {
@@ -189,7 +189,12 @@ a a:hover {
   margin-bottom: 20px;
 }
 
+.image-slide main {
+  margin-top: 80px;
+  margin-bottom: auto;
+}
 .image-slide .images {
+  margin: 0;
   display: flex;
   justify-content: center;
   align-items: center;
