@@ -40,6 +40,7 @@ try {
 	});
 
 	arrowLeft.addEventListener('click', (e) => {
+		console.log('left');
 		index--;
 		if (index === 0) {
 			index = LargeImagesName.length;
@@ -48,6 +49,7 @@ try {
 	});
 
 	arrowRight.addEventListener('click', (e) => {
+		console.log('right');
 		index++;
 		if (index === LargeImagesName.length + 1) {
 			index = 1;
@@ -71,6 +73,7 @@ try {
 		image.src = `/resources/anatema/${LargeImagesName[index - 1]}.jpg`;
 		}
 	});
+
 } catch (error) {
 	console.log(error);
 }
@@ -92,6 +95,21 @@ try {
 			visible = false;
 		}
 	});
+
+	document.addEventListener('click', (e) => {
+		if(e.target.classList.value != "menu-btn") {
+			if(visible) {
+				menu.style.left = '-300px';
+				menuBtn.style.fontStyle = 'normal';
+				visible = false;
+			} else {
+			menu.style.left = '-300px';
+			menuBtn.style.fontStyle = 'normal';
+			visible = false;
+			}
+		}
+	})
+
 } catch (error) {
 	console.log(error);
 }

@@ -4,26 +4,8 @@
   padding: 0;
 }
 
-a {
-  text-decoration: none;
-  color: black;
-}
-a a:hover {
-  font-style: italic;
-}
-
-.article {
-  text-transform: none;
-  font-size: 1rem;
-  letter-spacing: 0.3px;
-  line-height: 2;
-}
-
-.underline {
-  text-decoration: underline;
-}
-
 .menu {
+  display: none;
   z-index: -1;
   position: fixed;
   top: 50px;
@@ -42,22 +24,18 @@ a a:hover {
   font-size: 0.8rem;
   margin-bottom: 20px;
 }
-.menu ul li a:hover {
-  font-style: italic;
-}
-.menu .home {
+.menu ul li .home {
   text-transform: none;
 }
-
-.slide-title {
-  position: absolute;
-  list-style-type: none;
+.menu ul li a:hover {
+  font-style: italic;
 }
 
 body {
   background-color: #f4f4f4;
   font-family: Arial, Helvetica, sans-serif;
   line-height: 1.6;
+  letter-spacing: 1px;
 }
 
 header {
@@ -66,13 +44,11 @@ header {
   top: 0;
   left: 0;
   width: 100%;
-  background: rgb(255, 255, 255);
-  background: linear-gradient(180deg, rgb(255, 255, 255) 0%, rgba(255, 255, 255, 0.7) 50%, rgba(255, 255, 255, 0) 100%);
+  background: linear-gradient(180deg, #f4f4f4 0%, rgba(244, 244, 244, 0.7) 80%, rgba(244, 244, 244, 0) 100%);
   z-index: 3;
   text-transform: uppercase;
   padding: 10px 40px;
   font-size: 0.7rem;
-  letter-spacing: 2px;
 }
 header h1 {
   font-size: 1.3rem;
@@ -84,30 +60,28 @@ header nav {
   justify-content: space-between;
   align-items: baseline;
 }
-header ul {
+header nav ul {
   display: flex;
   list-style-type: none;
 }
-header ul li {
+header nav ul li {
   margin-left: 40px;
 }
-header ul li:hover {
+header nav ul li:hover {
   font-style: italic;
 }
 header .menu-btn {
   font-size: 1.2rem;
-  padding: 5px;
   z-index: 10;
 }
 header .menu-btn:hover {
   cursor: pointer;
 }
-
 main {
   text-transform: uppercase;
-  margin: 100px 150px;
+  margin: 8em 9em;
   font-size: 1.1rem;
-  letter-spacing: 2px;
+  letter-spacing: 1px;
 }
 main ul {
   list-style-type: none;
@@ -120,6 +94,24 @@ main ul li:hover {
   font-style: italic;
 }
 
+.article {
+  text-transform: none;
+  font-size: 1rem;
+  line-height: 2;
+}
+
+a {
+  text-decoration: none;
+  color: black;
+}
+a a:hover {
+  font-style: italic;
+}
+
+.underline {
+  text-decoration: underline;
+}
+
 #index main {
   min-width: 650px;
   display: flex;
@@ -129,7 +121,7 @@ main ul li:hover {
 }
 
 #info main {
-  font-size: 0.7rem;
+  font-size: 1rem;
 }
 #info main > * {
   margin-bottom: 40px;
@@ -154,7 +146,6 @@ main ul li:hover {
 
 .articles main {
   text-align: center;
-  font-size: 1rem;
   margin-top: 0;
   margin-bottom: 0;
 }
@@ -162,11 +153,14 @@ main ul li:hover {
   font-family: "Times New Roman", Times, serif;
 }
 .articles main .article .article-header {
+  width: 60%;
+  display: inline-flex;
+  flex-direction: column;
   padding: 40vh 0;
-  position: relative;
 }
 .articles main .article .article-header .title {
   font-size: 1.5rem;
+  text-transform: uppercase;
   font-style: italic;
   font-weight: 400;
 }
@@ -181,48 +175,66 @@ main ul li:hover {
   color: gray;
 }
 .articles main .article .article-text {
+  font-family: Arial, Helvetica, sans-serif;
+  font-size: 0.9rem;
   -moz-column-count: 2;
        column-count: 2;
-  -moz-column-width: 60px;
-       column-width: 60px;
-  -moz-column-gap: 50px;
-       column-gap: 50px;
+  -moz-column-gap: 5em;
+       column-gap: 5em;
   text-align: left;
-  margin-top: 50px;
-  margin-bottom: 50px;
+  margin-top: 3em;
+  margin-bottom: 3em;
+}
+.articles main .article .article-text > p {
+  margin-bottom: 20px;
 }
 
-#anatema-img main {
-  border: 3px solid red;
-  position: relative;
-  top: 80px;
-  margin-top: 0;
-}
-#anatema-img main .images {
+.image-slide .images {
   display: flex;
   justify-content: center;
+  align-items: center;
 }
-#anatema-img main .images img {
-  max-height: 80vh;
+.image-slide .images img {
+  max-height: 75vh;
 }
-#anatema-img main .toggleBtns {
-  margin-top: 10px;
+.image-slide .images .arrows {
+  position: absolute;
+  width: 20%;
   display: flex;
-  justify-content: space-evenly;
-}
-#anatema-img main .toggleBtns .fa-solid {
+  justify-content: space-between;
+  bottom: 20px;
+  padding: 5px;
   font-size: 1.5rem;
   color: gray;
   transition: all 0.1s;
 }
-#anatema-img main .toggleBtns .fa-solid:hover {
+.image-slide .images .arrows fa-arrow-left:hover {
   color: black;
+  cursor: pointer;
 }
-#anatema-img main .toggleBtns .fa-solid:active {
+.image-slide .images .arrows fa-arrow-left:active {
   color: gray;
+}
+.image-slide .images .arrows fa-arrow-right:hover {
+  color: black;
+  cursor: pointer;
+}
+.image-slide .images .arrows fa-arrow-right:active {
+  color: gray;
+}
+.image-slide .about {
+  margin-top: 10px;
+  font-size: 0.5rem;
+  text-align: left;
 }
 
 @media screen and (max-width: 768px) {
+  .menu {
+    display: block;
+  }
+  .menu-btn:hover {
+    cursor: pointer;
+  }
   .articles main {
     margin-left: auto;
     margin-right: auto;
