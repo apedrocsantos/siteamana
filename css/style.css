@@ -1,0 +1,247 @@
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+.menu {
+  display: none;
+  z-index: -1;
+  position: fixed;
+  top: 50px;
+  left: -300px;
+  max-width: 300px;
+  height: 100vh;
+  background-color: rgba(244, 244, 244, 0.8);
+  transition: all ease-in-out 0.7s;
+}
+.menu ul {
+  flex-direction: column;
+  position: relative;
+  margin-right: 30px;
+}
+.menu ul li {
+  font-size: 0.8rem;
+  margin-bottom: 20px;
+}
+.menu ul li .home {
+  text-transform: none;
+}
+.menu ul li a:hover {
+  font-style: italic;
+}
+
+body {
+  background-color: #f4f4f4;
+  font-family: Arial, Helvetica, sans-serif;
+  line-height: 1.6;
+  letter-spacing: 1px;
+}
+
+header {
+  max-height: 80px;
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  background: linear-gradient(180deg, #f4f4f4 0%, rgba(244, 244, 244, 0.7) 80%, rgba(244, 244, 244, 0) 100%);
+  z-index: 3;
+  text-transform: uppercase;
+  padding: 10px 40px;
+  font-size: 0.7rem;
+}
+header h1 {
+  font-size: 1.3rem;
+  font-weight: 400;
+}
+header nav {
+  width: 100%;
+  display: flex;
+  justify-content: space-between;
+  align-items: baseline;
+}
+header nav ul {
+  display: flex;
+  list-style-type: none;
+}
+header nav ul li {
+  margin-left: 40px;
+}
+header nav ul li:hover {
+  font-style: italic;
+}
+header .menu-btn {
+  font-size: 1.2rem;
+  z-index: 10;
+}
+header .menu-btn:hover {
+  cursor: pointer;
+}
+main {
+  text-transform: uppercase;
+  margin: 8em 9em;
+  font-size: 1.1rem;
+  letter-spacing: 1px;
+}
+main ul {
+  list-style-type: none;
+  position: relative;
+}
+main ul li {
+  margin-top: 10px;
+}
+main ul li:hover {
+  font-style: italic;
+}
+
+.article {
+  text-transform: none;
+  font-size: 1rem;
+  line-height: 2;
+}
+
+a {
+  text-decoration: none;
+  color: black;
+}
+a a:hover {
+  font-style: italic;
+}
+
+.underline {
+  text-decoration: underline;
+}
+
+#index main {
+  min-width: 650px;
+  display: flex;
+  overflow: hidden;
+  justify-content: space-between;
+  align-items: center;
+}
+
+#info main {
+  font-size: 1rem;
+}
+#info main > * {
+  margin-bottom: 40px;
+}
+#info main #curriculum {
+  font-size: 0.5rem;
+}
+#info address a:hover {
+  font-style: italic;
+}
+
+#txt main .essay {
+  font-size: 1rem;
+  font-family: "Times New Roman", Times, serif;
+}
+#txt main .essay .author {
+  text-transform: none;
+}
+#txt main a:hover {
+  font-style: italic;
+}
+
+.articles main {
+  text-align: center;
+  margin-top: 0;
+  margin-bottom: 0;
+}
+.articles main .article {
+  font-family: "Times New Roman", Times, serif;
+}
+.articles main .article .article-header {
+  width: 60%;
+  display: inline-flex;
+  flex-direction: column;
+  padding: 40vh 0;
+}
+.articles main .article .article-header .title {
+  font-size: 1.5rem;
+  text-transform: uppercase;
+  font-style: italic;
+  font-weight: 400;
+}
+.articles main .article .article-header .author {
+  text-align: right;
+}
+.articles main .article .article-header .english-btn {
+  font-size: 0.8rem;
+  text-align: right;
+}
+.articles main .article .article-header .english-btn a {
+  color: gray;
+}
+.articles main .article .article-text {
+  font-family: Arial, Helvetica, sans-serif;
+  font-size: 0.9rem;
+  -moz-column-count: 2;
+       column-count: 2;
+  -moz-column-gap: 5em;
+       column-gap: 5em;
+  text-align: left;
+  margin-top: 3em;
+  margin-bottom: 3em;
+}
+.articles main .article .article-text > p {
+  margin-bottom: 20px;
+}
+
+.image-slide .images {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.image-slide .images img {
+  max-height: 75vh;
+}
+.image-slide .images .arrows {
+  position: absolute;
+  width: 20%;
+  display: flex;
+  justify-content: space-between;
+  bottom: 20px;
+  padding: 5px;
+  font-size: 1.5rem;
+  color: gray;
+  transition: all 0.1s;
+}
+.image-slide .images .arrows fa-arrow-left:hover {
+  color: black;
+  cursor: pointer;
+}
+.image-slide .images .arrows fa-arrow-left:active {
+  color: gray;
+}
+.image-slide .images .arrows fa-arrow-right:hover {
+  color: black;
+  cursor: pointer;
+}
+.image-slide .images .arrows fa-arrow-right:active {
+  color: gray;
+}
+.image-slide .about {
+  margin-top: 10px;
+  font-size: 0.5rem;
+  text-align: left;
+}
+
+@media screen and (max-width: 768px) {
+  .menu {
+    display: block;
+  }
+  .menu-btn:hover {
+    cursor: pointer;
+  }
+  .articles main {
+    margin-left: auto;
+    margin-right: auto;
+    width: 80%;
+  }
+  .articles main .article .article-text {
+    -moz-column-count: 1;
+         column-count: 1;
+  }
+}
