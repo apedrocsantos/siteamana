@@ -5,7 +5,7 @@
 }
 
 .menu {
-  z-index: -1;
+  z-index: 10;
   position: fixed;
   top: 50px;
   left: -300px;
@@ -61,9 +61,10 @@ header nav ul {
 }
 header nav ul li {
   margin-left: 40px;
+  margin-bottom: 2vh;
 }
 header .menu-btn, header .home-btn {
-  display: none;
+  display: block;
   font-size: 1.2rem;
   z-index: 10;
 }
@@ -71,7 +72,7 @@ header .menu-btn:hover, header .home-btn:hover {
   cursor: pointer;
 }
 header .home-btn {
-  display: block;
+  display: none;
 }
 
 main {
@@ -112,9 +113,6 @@ a:hover {
   align-items: center;
 }
 
-#info main {
-  font-size: 0.7rem;
-}
 #info main > * {
   margin-bottom: 40px;
 }
@@ -176,26 +174,28 @@ a:hover {
 }
 
 .image-slide main {
-  margin-top: 80px;
-  margin-bottom: auto;
+  margin: 0;
 }
 .image-slide .images {
-  margin: 0;
+  position: relative;
   display: flex;
+  height: 100vh;
   justify-content: center;
   align-items: center;
+  flex-direction: column;
 }
 .image-slide .images img {
-  max-height: 75vh;
+  max-height: 80vh;
   max-width: 95vw;
-  margin-top: auto;
 }
 .image-slide .images .arrows {
-  position: absolute;
-  width: 20%;
-  display: flex;
+  display: inline-flex;
+  display: none;
+  z-index: 10;
+  width: 50%;
   justify-content: space-between;
-  bottom: 20px;
+  position: absolute;
+  bottom: 7vh;
   padding: 5px;
   font-size: 1.5rem;
   color: gray;
@@ -228,44 +228,41 @@ a:hover {
   }
 }
 @media screen and (max-width: 768px) {
-  .menu-btn, header .home-btn {
-    display: block !important;
-  }
-  .menu-btn:hover, header .home-btn:hover {
-    cursor: pointer;
-  }
   .home-btn {
     background-color: red;
-    display: none !important;
-  }
-  #index main img {
-    position: absolute;
-    top: 25%;
-    max-width: 100vh;
-  }
-  #index main ul {
     display: none;
   }
-  #txt main {
-    margin: 20% 20%;
-    padding: 0;
-    font-size: 0.9rem;
-  }
-  .articles main {
-    margin-left: auto;
-    margin-right: auto;
-  }
-  .articles main .article .article-header {
-    padding: 30vh 0;
-  }
-  .articles main .article .article-text {
-    font-size: 0.8rem;
-    line-height: 1.5;
-    margin-left: auto;
-    margin-right: auto;
-    width: 80%;
-  }
 }
+#index main img {
+  position: absolute;
+  top: 25%;
+  max-width: 100vh;
+}
+#index main ul {
+  display: none;
+}
+
+#txt main, #info main {
+  margin: 20% 20%;
+  padding: 0;
+  font-size: 0.9rem;
+}
+
+.articles main {
+  margin-left: auto;
+  margin-right: auto;
+}
+.articles main .article .article-header {
+  padding: 30vh 0;
+}
+.articles main .article .article-text {
+  font-size: 0.8rem;
+  line-height: 1.5;
+  margin-left: auto;
+  margin-right: auto;
+  width: 80%;
+}
+
 .image-slide .about {
   display: none;
 }

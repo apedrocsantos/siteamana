@@ -25,7 +25,7 @@ let index = 1;
 
 try {
 	imagediv.addEventListener('click', (e) => {
-		if (e.x < 665) {
+		if (e.x < (e.target.clientWidth)/2) {
 			index--;
 			if (index === 0) {
 				index = LargeImagesName.length;
