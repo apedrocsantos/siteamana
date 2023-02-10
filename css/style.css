@@ -121,8 +121,8 @@ a:hover {
 }
 
 #txt main .essay {
-  font-size: rem;
   font-family: "Times New Roman", Times, serif;
+  margin-bottom: 5vh;
 }
 #txt main .essay .author {
   text-transform: none;
