@@ -5,30 +5,25 @@
 }
 
 .menu {
-  display: none;
   z-index: -1;
   position: fixed;
   top: 50px;
   left: -300px;
   max-width: 300px;
   height: 100vh;
-  background-color: rgba(244, 244, 244, 0.8);
   transition: all ease-in-out 0.7s;
 }
 .menu ul {
   flex-direction: column;
   position: relative;
   margin-right: 30px;
+  background-color: rgba(244, 244, 244, 0.8);
 }
 .menu ul li {
   font-size: 0.8rem;
-  margin-bottom: 20px;
 }
 .menu ul li .home {
   text-transform: none;
-}
-.menu ul li a:hover {
-  font-style: italic;
 }
 
 body {
@@ -51,7 +46,7 @@ header {
   font-size: 0.7rem;
 }
 header h1 {
-  font-size: 1.3rem;
+  font-size: 1.2rem;
   font-weight: 400;
 }
 header nav {
@@ -62,24 +57,26 @@ header nav {
 }
 header nav ul {
   display: flex;
-  list-style-type: none;
+  list-style: none;
 }
 header nav ul li {
   margin-left: 40px;
 }
-header nav ul li:hover {
-  font-style: italic;
-}
-header .menu-btn {
+header .menu-btn, header .home-btn {
+  display: none;
   font-size: 1.2rem;
   z-index: 10;
 }
-header .menu-btn:hover {
+header .menu-btn:hover, header .home-btn:hover {
   cursor: pointer;
 }
+header .home-btn {
+  display: block;
+}
+
 main {
   text-transform: uppercase;
-  margin: 8em 9em;
+  margin: 8rem;
   font-size: 1.1rem;
   letter-spacing: 1px;
 }
@@ -89,9 +86,6 @@ main ul {
 }
 main ul li {
   margin-top: 10px;
-}
-main ul li:hover {
-  font-style: italic;
 }
 
 .article {
@@ -104,7 +98,7 @@ a {
   text-decoration: none;
   color: black;
 }
-a a:hover {
+a:hover {
   font-style: italic;
 }
 
@@ -113,10 +107,8 @@ a a:hover {
 }
 
 #index main {
-  min-width: 650px;
   display: flex;
-  overflow: hidden;
-  justify-content: space-between;
+  justify-content: space-evenly;
   align-items: center;
 }
 
@@ -129,9 +121,6 @@ a a:hover {
 #info main #curriculum {
   font-size: 0.5rem;
 }
-#info address a:hover {
-  font-style: italic;
-}
 
 #txt main .essay {
   font-size: rem;
@@ -139,9 +128,6 @@ a a:hover {
 }
 #txt main .essay .author {
   text-transform: none;
-}
-#txt main a:hover {
-  font-style: italic;
 }
 
 .articles main {
@@ -201,6 +187,8 @@ a a:hover {
 }
 .image-slide .images img {
   max-height: 75vh;
+  max-width: 95vw;
+  margin-top: auto;
 }
 .image-slide .images .arrows {
   position: absolute;
@@ -233,20 +221,72 @@ a a:hover {
   text-align: left;
 }
 
-@media screen and (max-width: 768px) {
-  .menu {
-    display: block;
+@media screen and (max-width: 900px) {
+  main .article-text {
+    -moz-column-count: 1 !important;
+         column-count: 1 !important;
   }
-  .menu-btn:hover {
+}
+@media screen and (max-width: 768px) {
+  .menu-btn, header .home-btn {
+    display: block !important;
+  }
+  .menu-btn:hover, header .home-btn:hover {
     cursor: pointer;
+  }
+  .home-btn {
+    background-color: red;
+    display: none !important;
+  }
+  #index main img {
+    position: absolute;
+    top: 25%;
+    max-width: 100vh;
+  }
+  #index main ul {
+    display: none;
+  }
+  #txt main {
+    margin: 20% 20%;
+    padding: 0;
+    font-size: 0.9rem;
   }
   .articles main {
     margin-left: auto;
     margin-right: auto;
-    width: 80%;
+  }
+  .articles main .article .article-header {
+    padding: 30vh 0;
   }
   .articles main .article .article-text {
-    -moz-column-count: 1;
-         column-count: 1;
+    font-size: 0.8rem;
+    line-height: 1.5;
+    margin-left: auto;
+    margin-right: auto;
+    width: 80%;
+  }
+}
+.image-slide .about {
+  display: none;
+}
+
+@media screen and (max-width: 480px) {
+  header {
+    padding: 10px 10px;
+  }
+  header h1 {
+    display: none;
+  }
+  header nav ul {
+    background-color: #f4f4f4;
+    width: 100%;
+    position: fixed;
+    bottom: 0;
+    left: 0;
+    font-size: 0.6rem;
+  }
+  header nav ul li {
+    padding: 5px 10px;
+    margin: 0;
   }
 }

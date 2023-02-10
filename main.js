@@ -84,6 +84,7 @@ let visible = false;
 
 try {
 	menuBtn.addEventListener('click', () => {
+		console.log('menu click')
 		// e.preventDefault();
 		if (!visible) {
 			menu.style.left = '0';
