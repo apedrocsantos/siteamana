@@ -1,10 +1,9 @@
 .menu {
-  z-index: 10;
+  z-index: 9;
   position: fixed;
-  top: 50px;
-  left: -300px;
-  max-width: 300px;
-  height: 100vh;
+  top: -500px;
+  left: 0;
+  width: 100vw;
   transition: all ease-in-out 0.7s;
 }
 .menu ul {
@@ -22,16 +21,16 @@
 
 @media screen and (max-width: 900px) {
   main .article-text {
-    -moz-column-count: 1;
-         column-count: 1;
+    -moz-column-count: 1 !important;
+         column-count: 1 !important;
   }
 }
 @media screen and (max-width: 768px) {
   .home-btn {
-    display: none;
+    display: none !important;
   }
-  .menu-btn, header nav .home-btn {
-    display: block;
+  .menu-btn {
+    display: block !important;
   }
   #index main img {
     position: absolute;
@@ -227,16 +226,21 @@ header nav ul li {
   margin-left: 40px;
   margin-bottom: 2vh;
 }
-header nav .menu-btn, header nav .home-btn {
+header nav .menu-btn {
   display: none;
   font-size: 1.2rem;
   z-index: 10;
 }
-header nav .menu-btn:hover, header nav .home-btn:hover {
+header nav .menu-btn:hover {
   cursor: pointer;
 }
 header nav .home-btn {
   display: block;
+  font-size: 1.2rem;
+  z-index: 10;
+}
+header nav .home-btn:hover {
+  cursor: pointer;
 }
 
 main {

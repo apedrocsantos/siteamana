@@ -84,14 +84,12 @@ let visible = false;
 
 try {
 	menuBtn.addEventListener('click', () => {
-		console.log('menu click')
-		// e.preventDefault();
 		if (!visible) {
-			menu.style.left = '0';
+			menu.style.top = '50px';
 			menuBtn.style.fontStyle = 'italic';
 			visible = true;
 		} else {
-			menu.style.left = '-300px';
+			menu.style.top = '-500px';
 			menuBtn.style.fontStyle = 'normal';
 			visible = false;
 		}
@@ -100,11 +98,11 @@ try {
 	document.addEventListener('click', (e) => {
 		if(e.target.classList.value != "menu-btn") {
 			if(visible) {
-				menu.style.left = '-300px';
+				menu.style.top = '-500px';
 				menuBtn.style.fontStyle = 'normal';
 				visible = false;
 			} else {
-			menu.style.left = '-300px';
+			menu.style.top = '-500px';
 			menuBtn.style.fontStyle = 'normal';
 			visible = false;
 			}
