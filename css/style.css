@@ -10,7 +10,7 @@
   flex-direction: column;
   position: relative;
   margin-right: 30px;
-  background-color: rgba(244, 244, 244, 0.8);
+  background-color: rgba(244, 244, 244, 0.9);
 }
 .menu ul li {
   font-size: 0.8rem;
@@ -39,10 +39,6 @@
   }
   #index main ul {
     display: none;
-  }
-  #txt main, #info main {
-    margin: 20% 20%;
-    padding: 0;
   }
   .articles main {
     margin-left: auto;
@@ -80,6 +76,9 @@
   header nav ul li {
     padding: 5px 10px;
     margin: 0;
+  }
+  main {
+    margin: 4rem !important;
   }
 }
 .image-slide main {
@@ -139,7 +138,9 @@
 }
 
 .articles main {
+  text-transform: none;
   text-align: center;
+  line-height: 2;
   margin-top: 0;
   margin-bottom: 0;
 }
@@ -224,7 +225,7 @@ header nav ul {
 }
 header nav ul li {
   margin-left: 40px;
-  margin-bottom: 2vh;
+  margin-bottom: 1vh;
 }
 header nav .menu-btn {
   display: none;
@@ -257,12 +258,6 @@ main ul li {
   margin-top: 10px;
 }
 
-.article {
-  text-transform: none;
-  font-size: 1rem;
-  line-height: 2;
-}
-
 a {
   text-decoration: none;
   color: black;
@@ -291,10 +286,8 @@ a:hover {
   font-size: 0.5rem;
 }
 
-#txt main {
-  font-size: 0.9rem;
-}
 #txt main .essay {
+  line-height: 1;
   font-family: "Times New Roman", Times, serif;
   margin-bottom: 5vh;
 }
